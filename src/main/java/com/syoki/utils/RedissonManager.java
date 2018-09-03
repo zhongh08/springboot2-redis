@@ -36,7 +36,7 @@ public class RedissonManager {
     }
 
     static {
-        init("test","1");
+        init("","");
     }
 
     public static Redisson getRedisson(){
