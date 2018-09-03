@@ -21,7 +21,7 @@ public class RedissonManager {
             if(key==null || "".equals(key)){
                 key=RAtomicName;
             }
-            config.useSingleServer().setAddress("http://192.168.1.236:6379").setPassword("123456");
+            config.useSingleServer().setAddress("redis://192.168.1.236:6379").setPassword("123456");
             redisson = (Redisson) Redisson.create(config);
             //清空自增的ID数字
             RAtomicLong atomicLong = redisson.getAtomicLong(key);
